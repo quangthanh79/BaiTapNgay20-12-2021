@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/border_bottom"
+    >
+    <TextView
+        android:id="@+id/list_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/border_bottom"
+        />
+    <TextView
+        android:id="@+id/profile_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/list_header"
+        android:textSize="18sp"
+        android:text="Ảnh đại diện"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textStyle="bold"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_img"
+        android:src="@drawable/pat"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@+id/profile_avatar"
+        android:layout_centerHorizontal="true"
+        />
+    <LinearLayout
+        android:id="@+id/profile_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/profile_img"
+        android:weightSum="4"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Name :"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+
+            />
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="3"
+            android:text="Leanne Graham"
+            android:textSize="18sp"
+            android:paddingStart="10dp"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/profile_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/profile_name"
+        android:weightSum="4"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:text="User Name :"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="3"
+            android:text="Bret"
+            android:textSize="18sp"
+            android:paddingStart="10dp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/profile_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/profile_user_name"
+        android:weightSum="4"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:text="Email :"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:paddingStart="10dp"
+            android:id="@+id/email"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="3"
+            android:text="Sincere@april.biz"
+            android:textSize="18sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/profile_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/profile_email"
+        android:weightSum="4"
+        android:paddingTop="10dp"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:text="Address :"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:paddingStart="10dp"
+            android:id="@+id/address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Kulas Light, Apt. 556, Gwenborough"
+            android:textSize="18sp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/address_zipcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/profile_address"
+        android:weightSum="4"
+        >
+        <TextView
+            android:layout_marginStart="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:paddingStart="10dp"
+            android:id="@+id/zipcode"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="3"
+            android:text="Zipcode: 92998-3874"
+            android:textSize="18sp"
+            android:layout_marginEnd="0dp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/address_geo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/address_zipcode"
+        android:weightSum="4"
+        android:paddingBottom="10dp"
+        >
+        <TextView
+            android:layout_marginStart="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:paddingStart="10dp"
+            android:id="@+id/geo"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="3"
+            android:text="Geo: lat = -37.3159, lng = 81.1496"
+            android:textSize="18sp"
+            android:layout_marginEnd="0dp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/profile_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/address_geo"
+        android:weightSum="4"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:text="Phone :"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:paddingStart="10dp"
+            android:id="@+id/phone"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="3"
+            android:text="1-770-736-8031 x56442"
+            android:textSize="18sp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/profile_company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/profile_phone"
+        android:weightSum="4"
+        android:paddingTop="10dp"
+
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:text="Company :"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:paddingStart="10dp"
+            android:id="@+id/name_company"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="3"
+            android:text="Name: Romaguera-Crona"
+            android:textSize="18sp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/catchPhrase_company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/profile_company"
+        android:weightSum="4"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        >
+        <TextView
+            android:layout_marginStart="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:paddingStart="10dp"
+            android:id="@+id/catchPhraseCompany"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="3"
+            android:text="CatchPhrase: Multi-layered client-server neural-net"
+            android:textSize="18sp"
+            android:layout_marginEnd="0dp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/bs_company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/catchPhrase_company"
+        android:weightSum="4"
+
+        >
+        <TextView
+            android:layout_marginStart="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:paddingStart="10dp"
+            android:id="@+id/bsOfCompany"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="bs: harness real-time e-markets"
+            android:textSize="18sp"
+            android:layout_marginEnd="0dp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
